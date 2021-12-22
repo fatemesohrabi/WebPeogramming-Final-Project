@@ -1,0 +1,46 @@
+body {
+    background-color: #eed6ca;
+}
+
+@font-face {
+
+    font-family: Byekan;
+    src: url(fonts/BYekan.ttf) format('ttf');
+    src: url(fonts/BYekan.woff) format('woff');
+}
+
+* {
+    font-family: 'BYekan', Arial, sans-serif;
+}
+
+fieldset{
+    margin-left: 450px;
+    margin-right: 450px;
+}
+input{
+    background-color: mintcream;
+    border-radius: 5px;
+    height: 50px;
+}
+textarea{
+    background-color: mintcream;
+    border-radius: 5px;
+}
+legend{
+    text-align: center;
+    font-weight: 600;
+}
+
+input:focus,
+input:active {
+  border-color: transparent;
+  border-top: 2px solid crimson;
+  border-bottom: 2px solid crimson;
+  border-left: 2px solid crimson;
+  border-right: 2px solid crimson;
+}
+
+.Sub{
+    font-size: x-large;
+    width: 200px;
+}
