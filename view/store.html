@@ -6,13 +6,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Shafagh Online Store</title>
-        <link rel="stylesheet" type="text/css" href="store.css">
+        <link rel="stylesheet" type="text/css" href="../css/store.css">
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
-<script src="js/loaded.js"></script>
+<script src="../js/loaded.js"></script>
 <body>
         <div class="navBar">
-                <img src="logo.png" class="logo">
+                <img src="../Images/logo.png" class="logo">
                 <ul class="StickyPosition">
 
                         <li><a href="https://www.digikala.com/search/category-notebook-netbook-ultrabook/"
@@ -96,11 +96,11 @@
                         </li>
                 </ul>
                 <a href="https://www.digikala.com/cart/" target="_blank">
-                        <img class="s-icon" src="sh-cart.svg">
+                        <img class="s-icon" src="../Images/sh-cart.svg">
                 </a>
                 <a href="https://www.digikala.com/users/login-register/?_back=https://www.digikala.com/"
                         target="_blank">
-                        <img class="l-icon" src="user-logo.svg">
+                        <img class="l-icon" src="../Images/user-logo.svg">
                 </a>
 
         </div>
@@ -109,7 +109,7 @@
         <div class="product" ng-repeat="x in products">
                 <div class="prod-title"> 
                         <a href="https://www.digikala.com">
-                                <img class="prod-img" alt="{{x.Pname}}" ng-src="{{x.Pic}}">
+                                <img class="prod-img" alt="{{x.Pname}}" ng-src="../{{x.Pic}}">
                         </a>
                         <p class="prod-title">{{x.ProdName}}</p>
                         <p>{{x.TechInfo}}</p>
@@ -160,17 +160,17 @@
                 <div class="socialMedia">
                         <ul>
                                 <li>
-                                        <a href="https://t.me/fatemesohraabi"><img src="telegram.png"></a>
+                                        <a href="https://t.me/fatemesohraabi"><img src="../Images/telegram.png"></a>
                                 </li>
                                 <li>
                                         <a href="https://instagram.com/sohrabi__fateme?utm_medium=copy_link"><img
-                                                        src="instagram.png"></a>
+                                                        src="../Images/instagram.png"></a>
                                 </li>
                                 <li>
-                                        <a href="mailto:fatemesohrabi1379@gmail.com"><img src="gmail.png"></a>
+                                        <a href="mailto:fatemesohrabi1379@gmail.com"><img src="../Images/gmail.png"></a>
                                 </li>
                                 <li>
-                                        <a href="mailto:hadinasiri1385@yahoo.com"><img src="yahoo.png"></a>
+                                        <a href="mailto:hadinasiri1385@yahoo.com"><img src="../Images/yahoo.png"></a>
                                 </li>
                         </ul>
                 </div>

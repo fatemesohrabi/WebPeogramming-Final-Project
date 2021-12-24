@@ -11,8 +11,8 @@ body {
 @font-face {
 
     font-family: Byekan;
-    src: url(fonts/BYekan.ttf) format('ttf');
-    src: url(fonts/BYekan.woff) format('woff');
+    src: url(../fonts/BYekan.ttf) format('ttf');
+    src: url(../fonts/BYekan.woff) format('woff');
 }
 
 .navBar {

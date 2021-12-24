@@ -5,8 +5,8 @@ body {
 @font-face {
 
     font-family: Byekan;
-    src: url(fonts/BYekan.ttf) format('ttf');
-    src: url(fonts/BYekan.woff) format('woff');
+    src: url(../fonts/BYekan.ttf) format('ttf');
+    src: url(../fonts/BYekan.woff) format('woff');
 }
 
 * {
@@ -20,6 +20,7 @@ fieldset{
 input{
     background-color: mintcream;
     border-radius: 5px;
+    height: 50px;
 }
 textarea{
     background-color: mintcream;
@@ -33,5 +34,13 @@ legend{
 input:focus,
 input:active {
   border-color: transparent;
-  border-bottom: 2px solid #1c87c9;
+  border-top: 2px solid crimson;
+  border-bottom: 2px solid crimson;
+  border-left: 2px solid crimson;
+  border-right: 2px solid crimson;
+}
+
+.Sub{
+    font-size: x-large;
+    width: 200px;
 }
