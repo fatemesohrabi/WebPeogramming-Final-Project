@@ -97,7 +97,7 @@ include $ViewPath."Profile.html";
 
 
 
- $ShareFolderPath."footer.html";
+include $ShareFolderPath."footer.html";
 
 
 
