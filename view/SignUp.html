@@ -45,9 +45,8 @@
                 </td>
                 <td>
                     <input type="text" maxlength="20" size="65" placeholder="نام کاربری خود را وارد کنید"
-                        name="uiUserName"
-                        onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || 
-                            (event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 48 && event.charCode <= 57)" required>
+                        name="uiUserName" pattern="^[A-Za-z][A-Za-z0-9_]{4,30}$" required>
+                        <p class="notice">نام کاربری باید با حرف آغاز شود. علامت های!@#$%^&* در نام کاربری غیر مجاز می باشند. استفاه از "_" بلامانع است." حداقل طول نام کاربری 5 می باشد.</p>
                 </td>
             </tr>
 
@@ -57,7 +56,8 @@
                 </td>
                 <td>
                     <input type="PassWord" size="65" placeholder="کلمه عبور خود را وارد کنید" name="uiPassWord"
-                        required>
+                        id="passWd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                        <p class="notice">کلمه عبور باید حتما شامل حداقل یک عدد، یک حرف بزرگ، یک حرف کوچک و طول 8 کاراکتر باشد.</p>
                 </td>
             </tr>
 
