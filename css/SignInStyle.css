@@ -13,10 +13,6 @@ body {
     font-family: 'BYekan', Arial, sans-serif;
 }
 
-fieldset{
-    margin-left: 450px;
-    margin-right: 450px;
-}
 input{
     background-color: mintcream;
     border-radius: 5px;
@@ -43,4 +39,11 @@ input:active {
 .Sub{
     font-size: x-large;
     width: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+    table{
+        width: auto;
+        text-align: center;
+    }
 }

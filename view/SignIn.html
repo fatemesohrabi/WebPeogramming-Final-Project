@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,52 +8,53 @@
     <link rel="stylesheet" type="text/css" href="css/SignInStyle.css">
     <title>ورود</title>
 </head>
+
 <body>
-    <fieldset dir="rtl">
-        <legend>ورود به حساب کاربری</legend>
-        <form action="Signin.php" method="post">
-            
-            <table width="550" border="1px" border-radius="5px" align="center">
-                <tr>
-                    <td colspan="2" align="center">
-                        <img src="Images/logo.png">
-                    </td>
-                   
+    <legend>ورود به حساب کاربری</legend>
+    <form action="Signin.php" method="post">
 
-                </tr>
+        <table width="550" border="1px" border-radius="5px" align="center">
+            <tr>
+                <td colspan="2" align="center">
+                    <img src="Images/logo.png">
+                </td>
 
-                <tr>
-                    <span><?php echo $Message; ?></span>
-                    <td width="150" align="left">
-                        نام کاربری :
-                    </td>
-                    <td>
-                        <input type="text" maxlength="20" size="65" placeholder="نام کاربری خود را وارد کنید"
-                            name="uiUserName" onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || 
+
+            </tr>
+
+            <tr>
+                <span><?php echo $Message; ?></span>
+                <td width="150" align="left">
+                    نام کاربری :
+                </td>
+                <td>
+                    <input type="text" maxlength="20" size="65" placeholder="نام کاربری خود را وارد کنید"
+                        name="uiUserName"
+                        onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || 
                             (event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 48 && event.charCode <= 57)" required>
-                    </td>
-                </tr>
+                </td>
+            </tr>
 
-                <tr>
-                    <td width="150" align="left">
-                        کلمه عبور :
-                    </td>
-                    <td>
-                        <input type="PassWord" size="65" placeholder="کلمه عبور خود را وارد کنید"
-                            name="uiPassWord" required>
-                    </td>
-                </tr>
+            <tr>
+                <td width="150" align="left">
+                    کلمه عبور :
+                </td>
+                <td>
+                    <input type="PassWord" size="65" placeholder="کلمه عبور خود را وارد کنید" name="uiPassWord"
+                        required>
+                </td>
+            </tr>
 
-                <tr>
-                    <td colspan="2" align="center">
-                        <input type="submit" class="Sub" value="ورود" name="submit">
-                        <a href="signup.php">ثبت نام</a>
-                    </td>
-                </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" class="Sub" value="ورود" name="submit">
+                    <a href="signup.php"><input type="button" class="Sub" value="ثبت نام" name="sUp"></a>
+                </td>
+            </tr>
 
-            </table>
+        </table>
 
-        </form>
-    </fieldset>
+    </form>
 </body>
+
 </html>
