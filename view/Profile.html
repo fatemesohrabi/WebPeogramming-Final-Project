@@ -16,21 +16,21 @@
 	<div class="profile_pic">
 		<img src="Images/user-profile-default-image.png">
 	</div>
-	<form dir="rtl" class="info" action="Profile.php" method="post">
+	<form dir="rtl" class="profinfo" action="Profile.php" method="post">
 		نام : <br>
-		<input type="text" maxlength="50" size="65" name="uiFname"  value="<?php echo $Fname;?>"><br>
+		<input type="text" class="profInput" maxlength="50" size="65" name="uiFname"  value="<?php echo $Fname;?>"><br>
 		نام خانوادگی: <br>
-		<input type="text" maxlength="50" size="65" name="uiLname" value="<?php echo $Lname;?>"><br>
+		<input type="text" class="profInput" maxlength="50" size="65" name="uiLname" value="<?php echo $Lname;?>"><br>
 		نام کاربری: <br>
-		<input type="text" maxlength="20" size="65" name="uiUserName" value="<?php echo $UserName;?>"><br>
+		<input type="text" class="profInput" maxlength="20" size="65" name="uiUserName" value="<?php echo $UserName;?>"><br>
 		کلمه عبور: <br>
-		<input type="password" size="65" name="uiPassWord" value="<?php echo $PassWord;?>"><br>
+		<input type="password" class="profInput" size="65" name="uiPassWord" value="<?php echo $PassWord;?>"><br>
 		ایمیل: <br>
-		<input type="email" size="65" name="uiEmail" value="<?php echo $Email;?>"><br>
+		<input type="email" class="profInput" size="65" name="uiEmail" value="<?php echo $Email;?>"><br>
 		آدرس: <br>
-		<input type="address" size="65" name="uiAddress" value="<?php echo $Address;?>"><br>
+		<input type="address" class="profInput" size="65" name="uiAddress" value="<?php echo $Address;?>"><br>
 		تلفن: <br>
-		<input type="address" size="65" name="uiPhone" value="<?php echo $Phone;?>"><br>
+		<input type="address" class="profInput" size="65" name="uiPhone" value="<?php echo $Phone;?>"><br>
 		<br>
 		<input class="but" type="submit" value="ثبت تغییرات" name="change">
 		<input class="but" type="submit" value="خروج از حساب کاربری" name="SignOut">

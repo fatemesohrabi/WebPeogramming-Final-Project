@@ -4,7 +4,7 @@ require "config.php";
 require "model/user.php";
 require "model/product.php";
 //$u;
-//include $ShareFolderPath."header.html";
+include $ShareFolderPath."header.html";
 $ProductsList = '';
 $OldUserName="";
 
@@ -92,8 +92,8 @@ if(isset($_SESSION['CART']))
 }
 
 include $ViewPath."Profile.html";
-//include $ShareFolderPath."header.html";
-//include $ShareFolderPath."menu.html";
+// include $ShareFolderPath."header.html";
+// include $ShareFolderPath."menu.html";
 
 
 

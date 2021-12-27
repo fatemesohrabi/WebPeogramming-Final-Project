@@ -15,6 +15,84 @@ body {
     src: url(../fonts/BYekan.woff) format('woff');
 }
 
+.profile_pic{
+    background-color: #f8c4aa;
+    text-align: center;
+}
+
+.profile_pic img{
+    border-radius: 50%;
+    opacity: 0.5;
+    width: 10%;
+    height: 10%;
+}
+
+.profinfo{
+    text-align: center;
+}
+
+.profInput{
+    height: 30px;
+}
+
+.but{
+    width: 250px;
+    height: 65px;
+}
+
+@media only screen and (max-width: 600px) {
+    .profInput{
+        height: 20px;
+        width: 75%;
+    }
+    
+    .but{
+        width: 150px;
+        height: 33px;
+    }
+}
+
+hr{
+    height: 3px;
+    width: 95%;
+    text-align: center;
+    background-color: #f8c4aa;
+}
+
+.cart{
+    text-align: center;
+}
+
+figure{
+    text-align: right;
+}
+
+figure img{
+    width: auto;
+}
+#products {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #products td, #products th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #products tr:nth-child(even){background-color: #f8c4aa;}
+  
+  #products tr:hover {background-color: #ddd;}
+  
+  #products th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+
 .navBar {
     background-color: #eed6ca;
     display: flex;

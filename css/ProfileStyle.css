@@ -26,11 +26,11 @@ body{
     height: 10%;
 }
 
-.info{
+.profinfo{
     text-align: center;
 }
 
-input{
+.profInput{
     height: 30px;
 }
 
@@ -40,7 +40,7 @@ input{
 }
 
 @media only screen and (max-width: 600px) {
-    input{
+    .profInput{
         height: 20px;
         width: 75%;
     }
