@@ -39,6 +39,11 @@ if(isset($_POST['change']))
     $_SESSION['USER'] = serialize($u);
     header('Location: Profile.php');
 }
+if(isset($_POST['SignOut']))
+{
+    unset($_SESSION['CART']);
+    header('Location: SignIn.php');
+}
 /*if(isset($_POST['submit']) && isset($_SESSION['CART']) )
 {
     $deletedProduct=($_POST['btn']);
