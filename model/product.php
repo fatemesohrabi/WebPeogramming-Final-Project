@@ -76,20 +76,34 @@ class product
     {
         $this->Pic = $Pic;
     }
+    public function GetProduct()
+    {
+        $paramTypes = "s";
+        $Parameters = array($this->ProdName);
+        $result = database::ExecuteQuery('GetProduct', $paramTypes, $Parameters);
+        //print_r($Parameters);
+        if(mysqli_num_rows($result) > 0)
+        {
+            $row = $result->fetch_array();
+            $this->setInfo($row["Info"]);
+            $this->setTechInfo($row["TechInfo"]);
+            $this->setPrice($row["Price"]);
+            $this->setCount($row["Count"]);
+            $this->setPname($row["Pname"]);
+            $this->setPic($row["Pic"]);
 
-    function Save()
-    {
-            $Query = "INSERT INTO product(ProdName, Info, TechInfo, Price,'Count',Pname,Pic) VALUES ('".$this->ProdName."', '".$this->Info."', '".$this->TechInfo."', '".$this->Price."','".$this->Count."','".$this->Pname."','".$this->Pic."')";
-            database::ExecuteQuery($Query);
             return true;
+        }
+        return false;
     }
+
     public static function GetAllproducts()
+    
     {
-        $Query="SELECT * FROM product WHERE 1";
-        $result = database::ExecuteQuery ($Query);
-        $productList=array();
+        $result = database::ExecuteQuery('GetAllproducts');
+        $productList = array();
         $i = 0;
-        
+     
         while ($row=$result->fetch_array())
         {
             $tempproduct= new product();

@@ -1,0 +1,20 @@
+ <div class="product">
+                
+        <div class="prod-title"> 
+                
+                <img class="prod-img" alt="<?php echo $Pname;?>" src="<?php echo $Pic;?>">
+                <form action="Product.php?Pname=<?php echo $ProdName;?>" method="post" style="display: inline;">
+                        <button class="btnplus" type="submit" name="submit" >
+                                <img class="pluscard" src="Images/PlusCardShop.png">
+                        </button>
+                        <br>
+                        <label class="prod-title"><?php echo $ProdName;?></label><br>
+                        <label><?php echo $TechInfo;?></label><br>
+                        <label><?php echo $Info;?></label><br>
+                        <label><?php echo $Count;?></label><br>
+                        <label><u><?php echo $Price;?> تومان</u></label><br>
+                </form>
+        </div> 
+        <label><?php echo $uiMessage;?></label>
+                        
+</div>  

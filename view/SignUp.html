@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/SignUpStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/SignUpStyle.css">
     <title>ثبت نام</title>
 </head>
 <body>
     <fieldset dir="rtl">
         <legend>ثبت نام</legend>
-        <form action="">
+        <form action="SignUp.php" method="post">
             <table width="550" border="1px" border-radius="5px" align="center">
                 <tr>
                     <td colspan="2" align="center">
-                        <img src="../Images/logo.png">
+                        <img src="Images/logo.png">
                     </td>
                 </tr>
 
@@ -23,7 +23,7 @@
                         نام:
                     </td>
                     <td>
-                        <input type="text" maxlength="20" size="65" placeholder="نام خود را وارد کنید" name="fname" required>
+                        <input type="text" maxlength="20" size="65" placeholder="نام خود را وارد کنید" name="uiFname" required>
                     </td>
                 </tr>
 
@@ -33,7 +33,7 @@
                     </td>
                     <td>
                         <input type="text" maxlength="20" size="65" placeholder="نام خانوادگی خود را وارد کنید"
-                            name="lname" required>
+                            name="uiLname" required>
                     </td>
                 </tr>
 
@@ -43,7 +43,7 @@
                     </td>
                     <td>
                         <input type="text" maxlength="20" size="65" placeholder="نام کاربری خود را وارد کنید"
-                            name="UserName" onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || 
+                            name="uiUserName" onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || 
                             (event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 48 && event.charCode <= 57)" required>
                     </td>
                 </tr>
@@ -54,7 +54,7 @@
                     </td>
                     <td>
                         <input type="PassWord" size="65" placeholder="کلمه عبور خود را وارد کنید"
-                            name="passwd" required>
+                            name="uiPassWord" required>
                     </td>
                 </tr>
 
@@ -63,7 +63,7 @@
                         ایمیل :
                     </td>
                     <td>
-                        <input type="email" size="65" placeholder="ایمیل خود را وارد کنید" name="mail" required>
+                        <input type="text" size="65" placeholder="ایمیل خود را وارد کنید" name="uiEmail" required>
                     </td>
                 </tr>
 
@@ -74,7 +74,7 @@
                     <td>
                         <input type="tel" size="65"
                             placeholder="شماره تلفن خود را با فرمت (1111 111 0911) بدون فاصله وارد کنید"
-                            pattern="09[0-9]{2}[0-9]{3}[0-9]{4}" required name="phone">
+                            pattern="09[0-9]{2}[0-9]{3}[0-9]{4}" required name="uiPhone">
                     </td>
                 </tr>
 
@@ -83,7 +83,7 @@
                         آدرس :
                     </td>
                     <td>
-                        <textarea rows="10" cols="65" name="add" required></textarea>
+                        <textarea rows="10" cols="65" name="uiAddress" required></textarea>
                     </td>
                 </tr>
 

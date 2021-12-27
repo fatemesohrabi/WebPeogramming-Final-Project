@@ -16,14 +16,55 @@ abstract class database
         return $connection;
     }
 
-    public static function ExecuteQuery($Query)
+
+    private static function PrepareParameters($ParamTypes, $Parameters)
+    {
+        $inputArray[] = &$ParamTypes;
+        $j = count($Parameters);
+        $ParameterQuestionMarks = "";
+        for($i=0;$i<$j;$i++){
+            $inputArray[] = &$Parameters[$i];
+            $ParameterQuestionMarks.='?,';
+        }
+
+        return array("ParameterQuestionMarks"=>$ParameterQuestionMarks, "inputArray"=>$inputArray);
+    }
+
+    public static function ExecuteQuery($StoredProcedureName, $ParamTypes="", $Parameters=array())
     {
         $connection = database::ConnectToDB();
-        $result = mysqli_query($connection, $Query);
-        if(!$result)
-            die(mysqli_error($connection));
-        mysqli_close($connection);
+
+        $tempParameters = database::PrepareParameters($ParamTypes, $Parameters);
+        $inputArray = $tempParameters["inputArray"];
+        $ParameterQuestionMarks = $tempParameters["ParameterQuestionMarks"];
+
+        $sql = "CALL ".$StoredProcedureName."(".substr($ParameterQuestionMarks, 0, -1).")";
+
+        if($stmt = mysqli_prepare($connection, $sql))
+        {
+           
+
+            if($ParamTypes != "")
+                call_user_func_array(array($stmt, 'bind_param'), $inputArray);
+            try {
+
+                $stmt->execute();
+                $result = $stmt->get_result();
+                mysqli_stmt_close($stmt);
+            }
+            catch (Exception $err)
+            {
+                die($err->getMessage());
+            }
+        }
+        else
+            echo "Error!";
+
+        $connection->close();
         return $result;
+
     }
+
+
 }
 ?>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/ProfileStyle.css">
+	<title>صفحه کاربری</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+<script src="js/loaded.js"></script>
+<script src="js/jquery/jquery.min.js"></script>
+
+<body>
+	<div class="profile_pic">
+		<img src="Images/user-profile-default-image.png">
+	</div>
+	<form dir="rtl" class="info" action="Profile.php" method="post">
+		نام : <br>
+		<input type="text" maxlength="50" size="65" name="uiFname"  value="<?php echo $Fname;?>"><br>
+		نام خانوادگی: <br>
+		<input type="text" maxlength="50" size="65" name="uiLname" value="<?php echo $Lname;?>"><br>
+		نام کاربری: <br>
+		<input type="text" maxlength="20" size="65" name="uiUserName" value="<?php echo $UserName;?>"><br>
+		کلمه عبور: <br>
+		<input type="password" size="65" name="uiPassWord" value="<?php echo $PassWord;?>"><br>
+		ایمیل: <br>
+		<input type="email" size="65" name="uiEmail" value="<?php echo $Email;?>"><br>
+		آدرس: <br>
+		<input type="address" size="65" name="uiAddress" value="<?php echo $Address;?>"><br>
+		تلفن: <br>
+		<input type="address" size="65" name="uiPhone" value="<?php echo $Phone;?>"><br>
+		<br>
+		<input class="but" type="submit" value="ثبت تغییرات" name="change">
+	</form>
+	<hr>
+	<div dir="rtl" class="cart">
+		<pre><img src="Images/sh-cart.svg" alt="سبد خرید"/>  سبد خرید</pre>
+					
+	<div method="post" ng-app="myApp" ng-controller="myController2">
+		<div class="product" >
+		
+							<table id="products">
+					
+								<tr>
+									<td>نام کالا</td>
+									<td>حذف</td>								
+								</tr>
+								<tr ng-repeat="x in products">
+									<td>{{x.Pname}}</td>
+									<td><button ng-click="fun(x.Pname)" >حذف</button></td>
+								</tr>
+							</table>	
+							
+				
+		</div>  
+	</div>   
+	</div>
+
+</body>
+
+</html>
