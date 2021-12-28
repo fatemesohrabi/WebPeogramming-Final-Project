@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 27, 2021 at 11:41 AM
+-- Generation Time: Dec 28, 2021 at 07:02 PM
 -- Server version: 10.4.21-MariaDB
--- PHP Version: 7.4.25
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -119,10 +119,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`Fname`, `Lname`, `UserName`, `PassWord`, `Email`, `Phone`, `Address`) VALUES
-('فاطمه', 'خر', 'fateme7979', '561c489b2f2c6d16dc8f050aee5099db', 'mes@gmail.com', '09123414352', 'hbvvvvvvvvvvvvvv'),
-('علی', 'رضایی', 'ali9889', '561c489b2f2c6d16dc8f050aee5099db', 'ali@gmail.com', '09123415467', 'تهران خیابان انقلاب پلاک9'),
-('فاطمه', 'سهرابی', 'fatemesohrabi1379', '2299ed2b4b92015d16ac81d1e773ecd8', 'fatemesohrabi1379@gmail.com', '09123455432', 'گاوازنگ'),
-('یاسمن', 'احمدی', 'yasaman12', 'f62d40ac50b6cb064b993bea66c3fc42', 'yasaman@gmail.com', '09342146723', 'تهران خیابان فروردین');
+('هادی', 'نصیری', 'hadi_nasiri', 'b9f38d6df5687f51479cfdcc4ed7b1c4', 'hadinasiri1385@yahoo.com', '09397579104', 'زنجان - دانشگاه تحصیلات تکمیلی در علوم پایه');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
