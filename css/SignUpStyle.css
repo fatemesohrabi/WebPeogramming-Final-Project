@@ -21,10 +21,6 @@ textarea{
     background-color: mintcream;
     border-radius: 5px;
 }
-legend{
-    text-align: center;
-    font-weight: 600;
-}
 
 input:focus,
 input:active {
@@ -41,4 +37,8 @@ input:active {
 
 p{
     font-size: x-small;
+}
+
+td{
+    vertical-align: top;
 }
