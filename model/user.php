@@ -91,14 +91,12 @@ class user extends person
     {
         $paramTypes = "ss";
         $Parameters = array($this->UserName, $this->PassWord);
-        //print_r($Parameters);
         $result = database::ExecuteQuery('CheckUserPass', $paramTypes, $Parameters);
         
         if(mysqli_num_rows($result) > 0)
         {
             $row = $result->fetch_array();
             $this->setFname($row["Fname"]);
-            //echo( $this->Fname);
             $this->setLname($row["Lname"]);
             $this->setEmail($row["Email"]);
             $this->setPhone($row["Phone"]);
@@ -112,7 +110,6 @@ class user extends person
         $paramTypes = "s";
         $Parameters = array($this->UserName);
         $result = database::ExecuteQuery('GetUser', $paramTypes, $Parameters);
-        //print_r($Parameters);
         if(mysqli_num_rows($result) > 0)
         {
             $row = $result->fetch_array();
@@ -147,7 +144,6 @@ class user extends person
         if(!$this->IsUsernameExist()) {
             $paramTypes = "sssssss";
             $Parameters = array($this->Fname, $this->Lname,$this->UserName, $this->PassWord,$this->Email,$this->Phone,$this->Address);
-            //print_r($Parameters)  ;
             database::ExecuteQuery('AddUser', $paramTypes, $Parameters);
             return true;
         }

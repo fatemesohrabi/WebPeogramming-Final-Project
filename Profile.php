@@ -3,7 +3,6 @@ session_start();
 require "config.php";
 require "model/user.php";
 require "model/product.php";
-//$u;
 
 $ProductsList = '';
 $OldUserName="";
@@ -39,64 +38,31 @@ if(isset($_POST['change']))
     $_SESSION['USER'] = serialize($u);
     header('Location: Profile.php');
 }
+
 if(isset($_POST['SignOut']))
 {
     unset($_SESSION['CART']);
     header('Location: SignIn.php');
 }
-/*if(isset($_POST['submit']) && isset($_SESSION['CART']) )
-{
-    $deletedProduct=($_POST['btn']);
-    echo($deletedProduct);
-    $NewList= array();
-    foreach($_SESSION['CART'] as $product)
-    {
-        //echo(unserialize($product));
-        if($deletedProduct==unserialize($product))
-        {
-            //echo("here");
-            //echo($deletedProduct);
-            $deletedProduct="";
-            continue;
-        }
-        array_push($NewList,$product);
 
-    }
-    unset($_SESSION['CART']);
-    $_SESSION['CART']=$NewList;
-    //header('Location: Profile.php');
-    
-}*/
 if(isset($_SESSION['CART'])) 
 {
     
     foreach($_SESSION['CART'] as $product)
     {
-        //Print out the product ID.
-        //echo($product.ProdName);
-        //$p=$product->getProdName();
         $pr=unserialize($product);
         $ProductsList .= '<tr>';
         $ProductsList .= '<td>'.$pr.'</td>';
         $ProductsList .= '<td><input type="submit" name="submit" value="حذف"></td>';
         $ProductsList .= '<td style="display: none;"><input type="text" name="btn" value="';
         $ProductsList .= $pr.'"></td>';
-        
-    
-        
         $ProductsList .= '</tr>';
-        
-        //header('Location: Profile.php');
     }  
 
 }
+
 include $ShareFolderPath."header.html";
 include $ViewPath."Profile.html";
-// include $ShareFolderPath."header.html";
-// include $ShareFolderPath."menu.html";
-
-
-
 include $ShareFolderPath."footer.html";
 
 

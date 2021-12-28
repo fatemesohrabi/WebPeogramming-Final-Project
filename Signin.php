@@ -4,8 +4,6 @@ unset($_SESSION['USER']);
 require "config.php";
 require "model/user.php";
 
-//include $ShareFolderPath."menu.html";
-
 $Message = '';
 if(isset($_POST['submit']))
 {
@@ -24,7 +22,6 @@ if(isset($_POST['submit']))
 
 include $ShareFolderPath."header.html";
 include $ViewPath."Signin.html";
-
 include $ShareFolderPath."footer.html";
 
 ?>

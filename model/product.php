@@ -81,7 +81,6 @@ class product
         $paramTypes = "s";
         $Parameters = array($this->ProdName);
         $result = database::ExecuteQuery('GetProduct', $paramTypes, $Parameters);
-        //print_r($Parameters);
         if(mysqli_num_rows($result) > 0)
         {
             $row = $result->fetch_array();
@@ -119,13 +118,7 @@ class product
             $tempproduct->setPic($row ['Pic']);
             $productList[$i++]=$tempproduct;
         }
-        
-        
-        //print_r($productList);
         return $productList;
     }
-
-
-
 }
 ?>

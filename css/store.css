@@ -266,82 +266,10 @@ ul li:hover ul {
 
 .product {
     background-color: rgba(195, 7, 63, 0.2);
-    ;
-    /*display: grid;*/
     margin: 10px;
-    grid-gap: 1px;
-     /*grid-template-areas:
-        'col11 col12 col13 col14'
-        'col21 col22 col23 col24'
-        'col31 col32 col33 col34'
-        'col41 col42 col43 col44';*/
     border: 1px solid black;
     color: white;
     text-align: center;
-}
-
-.prod1 {
-    grid-area: col11;
-}
-
-.prod2 {
-    grid-area: col12;
-}
-
-.prod3 {
-    grid-area: col13;
-}
-
-.prod4 {
-    grid-area: col14;
-}
-
-.prod5 {
-    grid-area: col21;
-}
-
-.prod6 {
-    grid-area: col22;
-}
-
-.prod7 {
-    grid-area: col23;
-}
-
-.prod8 {
-    grid-area: col24;
-}
-
-.prod9 {
-    grid-area: col31;
-}
-
-.prod10 {
-    grid-area: col32;
-}
-
-.prod11 {
-    grid-area: col33;
-}
-
-.prod12 {
-    grid-area: col34;
-}
-
-.prod13 {
-    grid-area: col41;
-}
-
-.prod14 {
-    grid-area: col42;
-}
-
-.prod15 {
-    grid-area: col43;
-}
-
-.prod16 {
-    grid-area: col44;
 }
 
 .product div {
@@ -421,76 +349,11 @@ ul li:hover ul {
     .product {
         background-color: rgba(195, 7, 63, 0.2);
         margin: -4px;
-        grid-gap: 1px;
         border: 1px solid black;
         color: white;
         text-align: center;
         font-size: x-small;
         z-index: 1;
-    }
-
-    .prod1 {
-        grid-area: col11;
-    }
-
-    .prod2 {
-        grid-area: col12;
-    }
-
-    .prod3 {
-        grid-area: col21;
-    }
-
-    .prod4 {
-        grid-area: col22;
-    }
-
-    .prod5 {
-        grid-area: col31;
-    }
-
-    .prod6 {
-        grid-area: col32;
-    }
-
-    .prod7 {
-        grid-area: col41;
-    }
-
-    .prod8 {
-        grid-area: col42;
-    }
-
-    .prod9 {
-        grid-area: col51;
-    }
-
-    .prod10 {
-        grid-area: col52;
-    }
-
-    .prod11 {
-        grid-area: col61;
-    }
-
-    .prod12 {
-        grid-area: col62;
-    }
-
-    .prod13 {
-        grid-area: col71;
-    }
-
-    .prod14 {
-        grid-area: col72;
-    }
-
-    .prod15 {
-        grid-area: col81;
-    }
-
-    .prod16 {
-        grid-area: col82;
     }
 
 

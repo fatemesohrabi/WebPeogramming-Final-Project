@@ -3,6 +3,7 @@ session_start();
 require "config.php";
 require "model/user.php";
 $Message = '';
+
 if(isset($_POST['submit']))
 {
     echo($_POST['uiUserName']);
@@ -26,8 +27,8 @@ if(isset($_POST['submit']))
     }
 
 }
+
 include $ShareFolderPath."header.html";
 include $ViewPath."Signup.html";
-
 include $ShareFolderPath."footer.html";
 ?>
