@@ -64,7 +64,5 @@ abstract class database
         return $result;
 
     }
-
-
 }
 ?>
